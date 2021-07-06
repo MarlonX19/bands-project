@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-// import { Container } from './styles';
+import { AuthContext } from '../../context';
+
+import './styles.css';
 
 function Login() {
+  const { handleLogin } = useContext(AuthContext);
+
+  function LoginUser() {
+    handleLogin();
+  }
+
   return (
-      <div>
-          <h1>login</h1>
+      <div className='container'>
+          <button type='button' onClick={() => LoginUser()}>Fazer login</button>
       </div>
   )
 }

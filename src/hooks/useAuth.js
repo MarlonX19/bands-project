@@ -8,8 +8,7 @@ export default function useAuth(){
     async function handleLogin(){
         try {
             const response = await api.get('/login')
-            
-            if(response.data.token) {
+            if(response.status === 200) {
                 setAuthenticated(true);
             }
         } catch (err) {

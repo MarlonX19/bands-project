@@ -9,13 +9,13 @@ function CustomRoute({ isAuth, isPrivate, ...rest }) {
     const { authenticated } = useContext(AuthContext);
     console.log('==authe', authenticated)
 
-    if(isAuth && !authenticated){
+    if(isAuth && authenticated){
         return <Redirect to='/home' />
     }
 
-    // if(isPrivate && !authenticated) {
-    //     return <Redirect to='/' />
-    // }
+    if(isPrivate && !authenticated) {
+        return <Redirect to='/' />
+    }
 
     return <Route { ...rest} />
 }
