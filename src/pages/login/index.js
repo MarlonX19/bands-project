@@ -12,7 +12,7 @@ function Login() {
   }
 
   return (
-      <div className='container'>
+      <div className='login-container'>
           <button type='button' onClick={() => LoginUser()}>Fazer login</button>
       </div>
   )

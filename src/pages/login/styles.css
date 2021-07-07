@@ -1,4 +1,4 @@
-.container {
+.login-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,7 +8,7 @@
     background-color: aliceblue;
 }
 
-button {
+.login-container button {
     border: 1px solid grey;
     padding: 10px 20px;
     outline: none;
@@ -18,7 +18,7 @@ button {
     text-transform: capitalize;
 }
 
-button:hover {
+.login-container button:hover {
     cursor: pointer;
     background-color: rgb(92, 131, 118);
     transition: 0.5s;

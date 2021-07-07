@@ -6,11 +6,11 @@ import useBands from '../hooks/useBands';
 const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
-    const { authenticated, handleLogin, } = useAuth();
+    const { authenticated, handleLogin, handleLogout, loadingLog } = useAuth();
     const { handleLoadBands } = useBands();
 
     return (
-        <AuthContext.Provider value={{ authenticated, handleLogin, handleLoadBands }}>
+        <AuthContext.Provider value={{ authenticated, handleLogin, handleLoadBands, handleLogout, loadingLog }}>
             {children}
         </AuthContext.Provider>
     )
